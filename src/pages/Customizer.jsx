@@ -55,7 +55,9 @@ const Customizer = () => {
     try {
       setGeneratingImg(true);
 
-      const response = await fetch(process.env.VITE_API_ADDRESS, {
+      console.log();
+
+      const response = await fetch(import.meta.env.VITE_API_ADDRESS, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
