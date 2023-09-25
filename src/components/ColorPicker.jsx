@@ -1,13 +1,21 @@
 import React from "react";
+import CustomButton from "./CustomButton";
 import { SketchPicker } from "react-color";
 import { useSnapshot } from "valtio";
 
 import state from "../store";
 
-const ColorPicker = () => {
+const ColorPicker = ({ setActiveEditorTab }) => {
   const snap = useSnapshot(state);
   return (
     <div className="absolute left-full ml-3">
+      <div className="flex">
+        <CustomButton
+          title="Close"
+          customStyles="text-sm text-right"
+          handleClick={() => setActiveEditorTab("")}
+        />
+      </div>
       <SketchPicker
         color={snap.color}
         disableAlpha

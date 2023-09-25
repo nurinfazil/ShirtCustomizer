@@ -2,9 +2,22 @@ import React from "react";
 
 import CustomButton from "./CustomButton";
 
-const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
+const AIPicker = ({
+  prompt,
+  setPrompt,
+  generatingImg,
+  handleSubmit,
+  setActiveEditorTab,
+}) => {
   return (
     <div className="aipicker-container">
+      <div className="flex">
+        <CustomButton
+          title="Close"
+          customStyles="text-sm text-right"
+          handleClick={() => setActiveEditorTab("")}
+        />
+      </div>
       <textarea
         placeholder="Ask AI..."
         row={5}

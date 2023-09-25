@@ -32,9 +32,16 @@ const Customizer = () => {
   const generateTabContent = () => {
     switch (activeEditorTab) {
       case "colorpicker":
-        return <ColorPicker />;
+        return <ColorPicker setActiveEditorTab={setActiveEditorTab} />;
       case "filepicker":
-        return <FilePicker file={file} setFile={setFile} readFile={readFile} />;
+        return (
+          <FilePicker
+            file={file}
+            setFile={setFile}
+            readFile={readFile}
+            setActiveEditorTab={setActiveEditorTab}
+          />
+        );
       case "aipicker":
         return (
           <AIPicker
@@ -42,6 +49,7 @@ const Customizer = () => {
             setPrompt={setPrompt}
             generatingImg={generatingImg}
             handleSubmit={handleSubmit}
+            setActiveEditorTab={setActiveEditorTab}
           />
         );
       default:
