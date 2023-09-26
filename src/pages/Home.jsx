@@ -20,26 +20,24 @@ const Home = () => {
         <motion.section className="home" {...slideAnimation("left")}>
           <motion.header {...slideAnimation("down")}>
             <img
-              src="./threejs.png"
+              src="./shirtbot.png"
               alt="logo"
-              className="w-8 h-8 object-contain"
+              className="w-20 h-20 object-contain"
             />
           </motion.header>
 
           <motion.div className="home-contant" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className="head-text">
-                LET'S <br className="xl:block hidden" /> DO IT.
-              </h1>
+              <h1 className="head-text">SHIRT BOT</h1>
             </motion.div>
             <motion.div
               {...headContentAnimation}
               className="flex flex-col gap-5"
             >
-              <p className="max-w-md font-normal text-gray-600 text-base">
-                Create your unique and exclusive shirt with our brand-new 3D
-                customization tool. <strong>Unleash your imagination</strong>{" "}
-                and define your own style.
+              <p className="max-w-md font-normal text-black-600 text-base">
+                Create a unique and exclusive shirt with the 3D customization
+                tool. <strong>Unleash your imagination</strong> and define your
+                own style.
               </p>
               <CustomButton
                 type="filled"
